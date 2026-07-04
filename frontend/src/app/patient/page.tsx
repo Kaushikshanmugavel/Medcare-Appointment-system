@@ -90,7 +90,7 @@ export default function PatientPortal() {
             </p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {doctors
               ?.filter((doc) => doc.status === 'active')
               .map((doctor) => (
@@ -183,17 +183,18 @@ export default function PatientPortal() {
                 </p>
               </div>
             ) : (
-              <div className="grid grid-cols-3 gap-2">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                 {slots?.map((slot) => (
                   <button
                     key={slot.time}
                     disabled={!slot.available}
                     onClick={() => handleSelectSlot(slot.time)}
-                    className={`py-2 px-3 rounded-lg text-xs font-bold transition-all border text-center ${
+                    className={`py-2 px-2.5 rounded-lg text-xs font-bold transition-all border text-center truncate ${
                       slot.available
                         ? 'border-blue-100 hover:border-blue-500 bg-white text-slate-700 hover:bg-blue-50 cursor-pointer shadow-2xs'
                         : 'border-slate-100 bg-slate-100 text-slate-400 cursor-not-allowed opacity-50'
                     }`}
+                    title={slot.time}
                   >
                     {slot.time}
                   </button>

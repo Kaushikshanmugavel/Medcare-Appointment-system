@@ -120,14 +120,14 @@ export default function DoctorManagement() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight">Doctors Registry</h1>
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Doctors Registry</h1>
           <p className="text-sm font-medium text-slate-500 mt-1">
             Add, update, or remove active medical consultants and working calendars.
           </p>
         </div>
         <Button
           onClick={handleOpenCreateModal}
-          className="inline-flex items-center space-x-2 font-bold shrink-0 self-start sm:self-center shadow-md"
+          className="inline-flex items-center space-x-2 font-bold shrink-0 self-start sm:self-center shadow-md w-full sm:w-auto"
         >
           <Plus size={16} />
           <span>Register Doctor</span>
@@ -136,14 +136,14 @@ export default function DoctorManagement() {
 
       {/* Filter and search bars */}
       <div className="flex bg-white p-4 border border-slate-100 rounded-xl shadow-2xs">
-        <div className="relative w-full max-w-md">
-          <Search className="absolute left-3 top-3 text-slate-400" size={16} />
+        <div className="relative w-full">
+          <Search className="absolute left-3 top-3.5 text-slate-400" size={16} />
           <input
             type="text"
             placeholder="Search doctors by name or specialty..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder:text-slate-400"
+            className="w-full pl-10 pr-4 py-2.5 bg-white border border-slate-200 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder:text-slate-400"
           />
         </div>
       </div>

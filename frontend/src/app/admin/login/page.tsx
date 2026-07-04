@@ -51,21 +51,21 @@ export default function AdminLoginPage() {
     <div className="flex flex-col min-h-screen">
       <Navbar />
 
-      <main className="flex-1 flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-12">
+      <main className="flex-1 flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="w-full max-w-md space-y-6">
           {/* Header branding */}
           <div className="text-center space-y-2">
-            <span className="inline-flex items-center justify-center p-3 bg-blue-50 text-blue-600 rounded-2xl shadow-xs">
-              <ShieldAlert size={28} className="stroke-[2.5]" />
+            <span className="inline-flex items-center justify-center p-2.5 sm:p-3 bg-blue-50 text-blue-600 rounded-2xl shadow-xs">
+              <ShieldAlert size={24} className="stroke-[2.5] sm:w-[28px] sm:h-[28px]" />
             </span>
-            <h1 className="text-2xl font-extrabold text-slate-900 tracking-tight">Admin Authentication</h1>
-            <p className="text-sm font-medium text-slate-500">
+            <h1 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">Admin Authentication</h1>
+            <p className="text-xs sm:text-sm font-medium text-slate-500">
               Please insert the secret key to enter the dashboard portal.
             </p>
           </div>
 
           <Card className="shadow-lg border-slate-100">
-            <CardContent className="p-8">
+            <CardContent className="p-5 sm:p-8">
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 {errorMsg && (
                   <div className="p-4 bg-red-50 border border-red-100 rounded-lg flex items-start space-x-3 text-red-700 text-xs font-semibold">

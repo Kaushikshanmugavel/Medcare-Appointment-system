@@ -57,26 +57,26 @@ export default function BookingConfirmationPage({ params }: ConfirmPageProps) {
     <div className="flex flex-col min-h-screen">
       <Navbar />
 
-      <main className="flex-1 max-w-2xl mx-auto w-full px-4 sm:px-6 py-12 flex flex-col justify-center">
-        <div className="text-center mb-8 space-y-3">
-          <div className="inline-flex items-center justify-center bg-emerald-50 text-emerald-600 p-4 rounded-full shadow-xs">
-            <CheckCircle size={40} className="stroke-[2.5]" />
+      <main className="flex-1 max-w-2xl mx-auto w-full px-4 sm:px-6 py-8 sm:py-12 flex flex-col justify-center">
+        <div className="text-center mb-6 sm:mb-8 space-y-3">
+          <div className="inline-flex items-center justify-center bg-emerald-50 text-emerald-600 p-3 sm:p-4 rounded-full shadow-xs">
+            <CheckCircle size={32} className="stroke-[2.5] sm:w-[40px] sm:h-[40px]" />
           </div>
-          <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight">Booking Confirmed!</h1>
-          <p className="text-sm font-medium text-slate-500">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Booking Confirmed!</h1>
+          <p className="text-xs sm:text-sm font-medium text-slate-500">
             Your appointment has been successfully registered in our systems.
           </p>
         </div>
 
         <Card className="border-emerald-100 shadow-md">
-          <CardContent className="p-8 space-y-6">
+          <CardContent className="p-5 sm:p-8 space-y-6">
             {/* Header info */}
             <div className="flex items-center justify-between border-b border-slate-100 pb-5">
               <div>
                 <span className="text-xs uppercase font-bold text-slate-400">Appointment ID</span>
-                <p className="text-lg font-bold text-slate-900 mt-0.5">{appointment.appointmentId}</p>
+                <p className="text-base sm:text-lg font-bold text-slate-900 mt-0.5">{appointment.appointmentId}</p>
               </div>
-              <span className="px-3 py-1 text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-100 rounded-full uppercase tracking-wider">
+              <span className="px-2.5 py-0.5 sm:px-3 sm:py-1 text-[10px] sm:text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-100 rounded-full uppercase tracking-wider">
                 Active
               </span>
             </div>
@@ -89,14 +89,14 @@ export default function BookingConfirmationPage({ params }: ConfirmPageProps) {
                   <Award size={18} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-900 leading-none">{doctor?.name || 'Medical Specialist'}</h3>
+                  <h3 className="font-bold text-slate-900 leading-none text-sm sm:text-base">{doctor?.name || 'Medical Specialist'}</h3>
                   <p className="text-xs font-semibold text-slate-500 mt-1">{doctor?.specialization || 'Consultant'}</p>
                 </div>
               </div>
             </div>
 
             {/* Schedule details */}
-            <div className="grid grid-cols-2 gap-4 border-t border-b border-slate-100 py-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-b border-slate-100 py-5">
               <div className="space-y-1">
                 <span className="text-xs uppercase font-bold text-slate-400 block">Date</span>
                 <div className="flex items-center space-x-2 text-sm font-bold text-slate-700">

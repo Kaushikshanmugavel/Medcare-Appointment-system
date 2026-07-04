@@ -21,7 +21,7 @@ export default function AppointmentsLog() {
     <div className="space-y-8">
       {/* Title */}
       <div>
-        <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight">Appointments Ledger</h1>
+        <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Appointments Ledger</h1>
         <p className="text-sm font-medium text-slate-500 mt-1">
           Review, filter, and track booked appointments across all registered specialists.
         </p>
@@ -61,13 +61,13 @@ export default function AppointmentsLog() {
 
         {/* Reset Action */}
         {(filterDate || filterDocId) && (
-          <div className="flex items-end pb-0.5">
+          <div className="flex items-end pb-0.5 w-full sm:w-auto">
             <button
               onClick={() => {
                 setFilterDate('');
                 setFilterDocId('');
               }}
-              className="text-xs font-bold text-blue-600 hover:text-blue-700 bg-blue-50 hover:bg-blue-100 rounded-lg px-4 py-2.5 transition-colors cursor-pointer"
+              className="text-xs font-bold text-blue-600 hover:text-blue-700 bg-blue-50 hover:bg-blue-100 rounded-lg px-4 py-2.5 transition-colors cursor-pointer w-full sm:w-auto text-center"
             >
               Clear Filters
             </button>

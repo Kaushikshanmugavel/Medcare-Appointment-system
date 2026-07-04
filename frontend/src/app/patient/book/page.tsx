@@ -76,17 +76,17 @@ function BookingFormContent() {
   };
 
   return (
-    <main className="flex-1 max-w-5xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-10">
+    <main className="flex-1 max-w-5xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
       {/* Back Link */}
-      <Link href="/patient" className="inline-flex items-center space-x-2 text-sm text-slate-500 hover:text-slate-800 mb-6 font-semibold transition-colors">
-        <ArrowLeft size={16} />
+      <Link href="/patient" className="inline-flex items-center space-x-2 text-xs sm:text-sm text-slate-500 hover:text-slate-800 mb-6 font-semibold transition-colors">
+        <ArrowLeft size={14} className="sm:w-[16px] sm:h-[16px]" />
         <span>Change Doctor or Time</span>
       </Link>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
         {/* Summary Column */}
-        <div className="lg:col-span-1 space-y-6">
-          <h2 className="text-xl font-extrabold text-slate-900 tracking-tight">Booking Summary</h2>
+        <div className="lg:col-span-1 space-y-4 sm:space-y-6">
+          <h2 className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight">Booking Summary</h2>
           
           {isLoadingDoctor ? (
             <div className="bg-white border rounded-2xl p-6 space-y-4 animate-pulse">
@@ -121,8 +121,8 @@ function BookingFormContent() {
         </div>
 
         {/* Form Column */}
-        <div className="lg:col-span-2 space-y-6">
-          <h2 className="text-xl font-extrabold text-slate-900 tracking-tight">Patient Information</h2>
+        <div className="lg:col-span-2 space-y-4 sm:space-y-6">
+          <h2 className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight">Patient Information</h2>
           
           <Card>
             <CardContent className="p-6">
